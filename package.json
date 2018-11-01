@@ -11,10 +11,10 @@
   "license": "MIT",
   "dependencies": {
     "parcel": "^1.10.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-three-renderer-fiber": "^0.0.2-0",
-    "three": "^0.97.0"
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-three-renderer-fiber": "^0.0.3-0",
+    "three": "^0.98.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

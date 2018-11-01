@@ -2,9 +2,7 @@ import React from 'react';
 import * as THREE from 'three';
 import Stats from 'stats.js';
 
-import React3 from 'react-three-renderer';
-
-import ExampleBase from '../ExampleBase';
+import React3 from 'react-three-renderer-fiber';
 
 import Info from './Info';
 
@@ -39,7 +37,7 @@ function satisfyConstrains(p1, p2, distance) {
 
 const tmpForce = new THREE.Vector3();
 
-class AnimationCloth extends ExampleBase {
+class AnimationCloth extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 

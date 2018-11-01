@@ -2,13 +2,11 @@ import React from 'react';
 
 import * as THREE from 'three';
 
-import PureRenderMixin from 'react/lib/ReactComponentWithPureRenderMixin';
-
 import PropTypes from 'prop-types';
 
 const ballSize = 60; // 40
 
-class Sphere extends React.Component {
+class Sphere extends React.PureComponent {
   static propTypes = {
     visible: PropTypes.bool.isRequired,
     position: PropTypes.instanceOf(THREE.Vector3).isRequired,
@@ -21,8 +19,6 @@ class Sphere extends React.Component {
       color: '0xaaaaaa',
     };
   }
-
-  shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate;
 
   render() {
     const {

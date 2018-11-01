@@ -1,8 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Simple from "./src/Simple";
+import ExamplePicker from "./src/ExamplePicker";
 
-ReactDOM.render(<Simple
-  width={500}
-  height={600}
-/>, document.getElementById("container"));
+ReactDOM.render(<ExamplePicker/>, document.getElementById("container"));

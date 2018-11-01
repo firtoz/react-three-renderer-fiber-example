@@ -1,10 +1,15 @@
 import React from "react";
 import Simple from "./examples/Simple";
+import AnimationCloth from "./examples/AnimationCloth";
 
 const examples = [
     {
         name: "Simple",
         component: Simple
+    },
+    {
+        name: "AnimationCloth",
+        component: AnimationCloth
     }
 ];
 

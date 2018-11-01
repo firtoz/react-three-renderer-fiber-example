@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import PureRenderMixin from 'react/lib/ReactComponentWithPureRenderMixin';
-
 import Cloth from './Cloth';
 
-class ClothGeometry extends React.Component {
+class ClothGeometry extends React.PureComponent {
   static propTypes = {
     cloth: PropTypes.instanceOf(Cloth).isRequired,
   };
@@ -19,8 +17,6 @@ class ClothGeometry extends React.Component {
   _geometryRef = (geometry) => {
     this.geometry = geometry;
   };
-
-  shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate;
 
   render() {
     const {

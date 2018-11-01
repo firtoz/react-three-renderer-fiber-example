@@ -2,9 +2,7 @@ import React from 'react';
 
 import * as THREE from 'three';
 
-import PureRenderMixin from 'react/lib/ReactComponentWithPureRenderMixin';
-
-class Poles extends React.Component {
+class Poles extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 
@@ -24,8 +22,6 @@ class Poles extends React.Component {
       subResource: false,
     };
   }
-
-  shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate;
 
   render() {
     return (<object3D>

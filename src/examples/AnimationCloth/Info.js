@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-class Info extends React.Component {
+class Info extends React.PureComponent {
   static propTypes = {
     toggleWind: PropTypes.func.isRequired,
     toggleSphere: PropTypes.func.isRequired,

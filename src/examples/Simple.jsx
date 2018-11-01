@@ -53,10 +53,7 @@ class Simple extends React.Component {
         // width = window.innerWidth
         // height = window.innerHeight
 
-        return (<React3
-            mainCamera="camera" // this points to the perspectiveCamera below
-            onAnimate={this._onAnimate}
-        >
+        return (<React3>
             <webGLRenderer
                 width={width}
                 height={height}

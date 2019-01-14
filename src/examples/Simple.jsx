@@ -19,21 +19,25 @@ class Simple extends React.Component {
 
         this.state = {
             cubeRotation: new THREE.Euler(),
+            doRotate: true,
+            cubeWidth: 1,
         };
 
         this._onAnimate = () => {
             // we will get this callback every frame
 
-            // pretend cubeRotation is immutable.
-            // this helps with updates and pure rendering.
-            // React will be sure that the rotation has now updated.
-            this.setState({
-                cubeRotation: new THREE.Euler(
-                    this.state.cubeRotation.x + 0.1,
-                    this.state.cubeRotation.y + 0.1,
-                    0
-                ),
-            });
+            if (this.state.doRotate) {
+                // pretend cubeRotation is immutable.
+                // this helps with updates and pure rendering.
+                // React will be sure that the rotation has now updated.
+                this.setState({
+                    cubeRotation: new THREE.Euler(
+                        this.state.cubeRotation.x + 0.1,
+                        this.state.cubeRotation.y + 0.1,
+                        0
+                    ),
+                });
+            }
 
             requestAnimationFrame(this._onAnimate);
         };
@@ -74,7 +78,7 @@ class Simple extends React.Component {
                             rotation={this.state.cubeRotation}
                         >
                             <boxGeometry
-                                width={1}
+                                width={this.state.cubeWidth}
                                 height={1}
                                 depth={1}
                             />

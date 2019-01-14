@@ -46,4 +46,4 @@ class ExamplePicker extends React.PureComponent {
     }
 }
 
-module.exports = ExamplePicker;
+export default ExamplePicker;
